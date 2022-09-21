@@ -1,8 +1,8 @@
 # Hackintosh-OptiPlex-7080-MT
 
-![](https://raw.githubusercontent.com/webleon/Hackintosh-OptiPlex-7080-MT/main/images/iShot2021-11.png)
+![](https://raw.githubusercontent.com/webleon/Hackintosh-OptiPlex-7080-MT/main/images/iShot2022-05.png)
 
-**Opencore Bootloader 0.7.6. Tested on Monterey 12.1**
+**Opencore Bootloader 0.8.1. Tested on Monterey 12.4**
 
 
 
@@ -18,7 +18,7 @@ You will have to [**generate a new SMIBIOS**](https://github.com/corpnewt/GenSMB
 * **GPU**: [ASRock AMD Radeon RX 6600 XT Challenger ITX 8GB](https://www.asrock.com/Graphics-Card/AMD/Radeon%20RX%206600%20XT%20Challenger%20ITX%208GB/)
 * **RAM**: 64GB DDR4 2933 Daul Channel
 * **HDD**: WD Blue SN550 NVMe SSD 1T
-* **LAN**: Intel X540-T2 / Intel I219LM11
+* **LAN**: Intel X540-T2 / AQC107 / Intel I219LM11
 * **Wi-Fi & Bluetooth**: BCM94360NG
 
 
@@ -46,7 +46,7 @@ You will have to [**generate a new SMIBIOS**](https://github.com/corpnewt/GenSMB
 * Security → PTT Security: ***uncheck***
 * Secure Boot → Secure Boot Enable: ***uncheck***
 * Intel® Software Guard Extensions™ → Intel® SGX™ Enable: ***uncheck***
-* Virtualization Support → VT for Direct I/O: ***uncheck***
+* Virtualization Support → VT for Direct I/O: ***check***
 
 
 
@@ -89,6 +89,17 @@ sudo ethtool -E <eth2 name> magic 0x15288086 offset 0x48f value 0x00
 
 
 ## Changelog
+
+**2022-07-02**
+* suport AQC107 10GbE LAN (VT for Direct I/O need to be enabled in UEFI)
+* update to Opencore 0.8.1
+* KEXTs up to date
+* other minor updates
+
+**2022-05-23**
+* update to Opencore 0.8.0
+* tested on Monterey 12.4 release
+* minor updates
 
 **2021-12-15**
 * update to Opencore 0.7.6
